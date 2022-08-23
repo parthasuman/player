@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Price</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="w-9/12 mx-auto bg-slate-500">
+      <header class="bg-black">
+        <h1 class="text-center font-bold text-4xl text-orange-400 pt-8">
+          Select Your Best Arsenal Player
+        </h1>
+        <p class="text-center text-white">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod rem
+          sunt tenetur necessitatibus error, facilis tempore repellat provident
+          rerum? Dolor! Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Quod rem sunt tenetur necessitatibus error, facilis tempore
+          repellat provident rerum? Dolor!
+        </p>
+      </header>
+      <section class="py-8">
+        <div class="grid grid-cols-4 gap-4 w-9/12 mx-auto">
+          <div class="border-solid border-2 border-gray-200 bg-black pb-4">
+            <img class="bg-cover" src="images/player-1.jpg" alt="" srcset="" />
+            <h1 id="player-jesus" class="text-center text-white font-bold">
+              Gabriel Jesus
+            </h1>
+            <button
+              id="player1"
+              class="bg-orange-600 hover:bg-sky-700 px-4 py-1 rounded-lg ml-12"
+              onclick="addToList(this)"
+            >
+              Select
+            </button>
+          </div>
+          <div class="border-solid border-2 border-gray-200 bg-black pb-4">
+            <img class="bg-cover" src="images/player-1.jpg" alt="" srcset="" />
+            <h1 id="player-Martinelli" class="text-center text-white font-bold">
+              Gabriel Martinelli
+            </h1>
+            <button
+              id="player2"
+              class="bg-orange-600 hover:bg-sky-700 text-white px-4 py-1 rounded-lg ml-12"
+              onclick="addToList(this)"
+            >
+              Select
+            </button>
+          </div>
+          <div class="border-solid border-2 border-gray-200 bg-black pb-4">
+            <img class="bg-cover" src="images/player-1.jpg" alt="" srcset="" />
+            <h1 id="player-White" class="text-center text-white font-bold">
+              Ben White
+            </h1>
+            <button
+              id="player3"
+              class="bg-orange-600 hover:bg-sky-700 text-white px-4 py-1 rounded-lg ml-12"
+              onclick="addToList(this)"
+            >
+              Select
+            </button>
+          </div>
+          <div class="border-solid border-2 border-gray-200">
+            <h1 class="text-center text-white font-bold">Select-5</h1>
+            <p class="text-center text-white">
+              You selected: <span id="total-added-player">0</span>
+            </p>
+            <div id="list" class="list-decimal text-white ml-10"></div>
+            <!-- <ol id="list" class="list-decimal text-white ml-10"></ol> -->
+          </div>
+        </div>
+        <div class="grid grid-cols-4 gap-4 w-9/12 mx-auto py-8">
+          <div class="border-solid border-2 border-gray-200 bg-black pb-4">
+            <img class="bg-cover" src="images/player-1.jpg" alt="" srcset="" />
+            <h1 id="player-saka" class="text-center text-white font-bold">
+              Bukayo Saka
+            </h1>
+            <button
+              id="player4"
+              class="bg-orange-600 hover:bg-sky-700 text-white px-4 py-1 rounded-lg ml-12"
+              onclick="addToList(this)"
+            >
+              Select
+            </button>
+          </div>
+          <div class="border-solid border-2 border-gray-200 bg-black pb-4">
+            <img class="bg-cover" src="images/player-1.jpg" alt="" srcset="" />
+            <h1 id="player-smith" class="text-center text-white font-bold">
+              Smith Rowe
+            </h1>
+            <button
+              id="player5"
+              class="bg-orange-600 hover:bg-sky-700 text-white px-4 py-1 rounded-lg ml-12"
+              onclick="addToList(this)"
+            >
+              Select
+            </button>
+          </div>
+          <div class="border-solid border-2 border-gray-200 bg-black pb-4">
+            <img class="bg-cover" src="images/player-1.jpg" alt="" srcset="" />
+            <h1 id="player-martin" class="text-center text-white font-bold">
+              Martin Odegaard
+            </h1>
+            <button
+              id="player6"
+              class="bg-orange-600 hover:bg-sky-700 text-white px-4 py-1 rounded-lg ml-12"
+              onclick="addToList(this)"
+            >
+              Select
+            </button>
+          </div>
+          <div class="border-solid border-2 border-gray-200 bg-black">
+            <h1 class="text-center text-white font-bold">Budget</h1>
+            <div class="w-11/12 mx-auto">
+              <h3 class="text-center text-white">Per Player</h3>
+              <input
+                type="text"
+                name=""
+                id="player-field"
+                style="width: 160px"
+              />
+              <button
+                id="btn-player"
+                class="bg-orange-600 hover:bg-sky-700 text-white px-4 py-1 rounded-lg ml-9 mt-2"
+              >
+                Calculate
+              </button>
+              <h3 class="text-center text-white">
+                Player Expenses:$<span id="player-amount">00</span>
+              </h3>
+              <h3 class="text-center text-white">Manager</h3>
+              <input
+                class="mt-2"
+                type="text"
+                name=""
+                id="manager-field"
+                style="width: 160px"
+              />
+              <h3 class="text-center text-white">Coach</h3>
+              <input
+                class="mt-2"
+                type="text"
+                name=""
+                id="coach-field"
+                style="width: 160px"
+              />
+              <button
+                id="btn-calculate-all"
+                class="bg-orange-600 hover:bg-sky-7000 text-white px-4 py-1 rounded-lg ml-6 mt-2"
+              >
+                Calculate All
+              </button>
+
+              <h3 class="text-center text-white">
+                Total:$ <span id="total-cost"></span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="bg-black" />
+      <footer>
+        <p class="text-white text-center pb-12">
+          Copyright @ 2022 All Rights Reserved.
+        </p>
+      </footer>
+    </main>
+    <script src="js/playername.js"></script>
+    <script src="js/budget.js"></script>
+    <script src="js/calculateall.js"></script>
+    <script src="js/player.js"></script>
+  </body>
+</html>
